@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .heart{
+      margin:0 auto;
+      display:block;
+      padding:40px 0;
+      text-align: center;
+      opacity:0;
+      transition:.3s;
+    }
+
+    .spacer{
+      height:375px;
+    }
+    .show-heart{
+      opacity:1;
+    }
+  </style>
+
+</head>
+<body>
+
+<div class="spacer"></div>
+<div class="heart">
+  <img src="https://data.whicdn.com/images/134323328/original.png">
+</div>
+<div class="spacer"></div>
+
+</body>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script>
+
+  let controller = new ScrollMagic.Controller();
+  let scene1 = new ScrollMagic.Scene({
+    triggerElement:'.heart'
+  })
+  .setClassToggle('.heart','show-heart')
+  .addTo(controller)
+
+</script>
+</html>
